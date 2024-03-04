@@ -10,8 +10,12 @@
             - template / templateUrl
             - styles / styleUrls
     - Data binding
-        - TS -> HTML
-            - String interpolation
-            - Property binding
-        - HTML -> TS
-            - Event binding
+        - One way binding
+            - TS -> HTML
+                - String interpolation
+                - Property binding
+            - HTML -> TS
+                - Event binding
+                - $event
+        - Two way binding
+        

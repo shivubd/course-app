@@ -4,6 +4,7 @@
 <!-- PROPERTY BINDING: disabled is the property of button tag, and its value is coming from isDisabled variable ts -->
 <!-- TS EXPRESSION: between "" in property binding we can write typscript code and should not use string interpolation{{}} 
 because "" itself is a exp and cant put exp inside a exp-->
+<h2>servers component</h2>
 <button class="btn btn-primary" 
     [disabled]="isDisabled"
     [innerText]="isDisabled?'Disabled':'Create new server'"
@@ -12,3 +13,14 @@ because "" itself is a exp and cant put exp inside a exp-->
     <!--EVENT BINDING: here click is the event, that is triggered when button is clicked, when click event is triggered
     the exp between "" is executed in this case it calls a function onCreateServer() it can be typscript exp also-->
 <p>{{serverCreationStatus}}</p>
+
+<input type="text" class="form-control"
+    (input)="onUpdateServerName($event)">
+<!--$event when input event is triggered a event is passed to the method, this event contains the target and value-->
+<p>{{serverName}}</p>
+
+<input type="text" class="form-control"
+    [(ngModel)]="serverName">
+<!--TWO WAY BINDING: here we use ngModel from FormsModule
+    Here the value of typescript varible is set in input tag this is TS->HTML
+    and when the value is changed in input that value is set to typescript varible this is HTML->TS -->

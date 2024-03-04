@@ -26,6 +26,7 @@ export class ServersComponent {
   serverCreationStatus: string = 'No server was created';
   serverCount: number = 0;
   isDisabled: boolean = true;
+  serverName: string = 'Default value';
   constructor() {
     setTimeout(() => {
       this.isDisabled = false;
@@ -34,5 +35,9 @@ export class ServersComponent {
   onCreateServer() {
     this.serverCount += 1;
     this.serverCreationStatus = `Server ${this.serverCount} was sucessfully created`;
+  }
+  onUpdateServerName(event: Event) {
+    this.serverName = (<HTMLInputElement>event.target).value;
+    //event.target is a HTMLInputElement type, and has a value.
   }
 }

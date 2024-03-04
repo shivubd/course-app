@@ -1,0 +1,13 @@
+<h2>Data binding assignment</h2>
+<input type="text"
+    [(ngModel)]="username">
+<p>{{username}}</p>
+<button class="btn btn-primary" [disabled]="!username.length"
+    (click)="clearUsername()">Click to clear</button>
+
+<!--
+    Two way binding
+    String interpolation
+    Property binding
+    Event binding
+-->

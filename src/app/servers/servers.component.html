@@ -4,4 +4,11 @@
 <!-- PROPERTY BINDING: disabled is the property of button tag, and its value is coming from isDisabled variable ts -->
 <!-- TS EXPRESSION: between "" in property binding we can write typscript code and should not use string interpolation{{}} 
 because "" itself is a exp and cant put exp inside a exp-->
-<button class="btn btn-primary" [disabled]="isDisabled" [innerText]="isDisabled?'Disabled':'Create new server'"></button>
+<button class="btn btn-primary" 
+    [disabled]="isDisabled"
+    [innerText]="isDisabled?'Disabled':'Create new server'"
+    (click)="onCreateServer()"
+    (mouseover)="serverCreationStatus='Click to create a new server'"></button>
+    <!--EVENT BINDING: here click is the event, that is triggered when button is clicked, when click event is triggered
+    the exp between "" is executed in this case it calls a function onCreateServer() it can be typscript exp also-->
+<p>{{serverCreationStatus}}</p>

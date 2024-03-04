@@ -23,10 +23,16 @@ import { Component } from '@angular/core';
   // ]
 })
 export class ServersComponent {
+  serverCreationStatus: string = 'No server was created';
+  serverCount: number = 0;
   isDisabled: boolean = true;
   constructor() {
     setTimeout(() => {
       this.isDisabled = false;
     }, 2000);
+  }
+  onCreateServer() {
+    this.serverCount += 1;
+    this.serverCreationStatus = `Server ${this.serverCount} was sucessfully created`;
   }
 }

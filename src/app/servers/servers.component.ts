@@ -23,5 +23,10 @@ import { Component } from '@angular/core';
   // ]
 })
 export class ServersComponent {
-
+  isDisabled: boolean = true;
+  constructor() {
+    setTimeout(() => {
+      this.isDisabled = false;
+    }, 2000);
+  }
 }

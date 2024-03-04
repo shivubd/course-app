@@ -1,3 +1,7 @@
 <app-server></app-server>
-<app-server></app-server>
 <!-- Loads server component template twice-->
+
+<!-- PROPERTY BINDING: disabled is the property of button tag, and its value is coming from isDisabled variable ts -->
+<!-- TS EXPRESSION: between "" in property binding we can write typscript code and should not use string interpolation{{}} 
+because "" itself is a exp and cant put exp inside a exp-->
+<button class="btn btn-primary" [disabled]="isDisabled" [innerText]="isDisabled?'Disabled':'Create new server'"></button>

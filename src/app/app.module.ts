@@ -7,6 +7,7 @@ import { ServersComponent } from './servers/servers.component';
 import { FormsModule } from '@angular/forms';
 import { AllBindingComponent } from './all-binding/all-binding.component';
 import { DataBindingAssignmentComponent } from './data-binding-assignment/data-binding-assignment.component';
+import { LearnDirectivesComponent } from './learn-directives/learn-directives.component';
 
 @NgModule({ //Decorator for defining a module
   declarations: [
@@ -14,7 +15,8 @@ import { DataBindingAssignmentComponent } from './data-binding-assignment/data-b
     ServerComponent,
     ServersComponent,
     AllBindingComponent,
-    DataBindingAssignmentComponent //we should declare the components which will be used by app.component
+    DataBindingAssignmentComponent,
+    LearnDirectivesComponent //we should declare the components which will be used by app.component
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,35 @@
+<h2>Directives</h2>
+<input type="text" class="form-control"
+    (input)="setLabel($event)">
+<button class="btn btn-primary"
+    (click)="showLabel()">Submit</button>
+<p *ngIf="show; else noshowmsg">{{label}}</p>
+<!--If show is true the p tag is rendered else not-->
+<ng-template #noshowmsg>
+    <p>Add a label</p>
+</ng-template>
+<!--If show is not true else part will render #noshowmsg template, 
+    for else template we should use ng-template and a localreference #refrencename-->
+<!--ngIf is structural directive-->
+
+<!--IN ANGULAR 17 THERE IS CHANGE IN USE OF DIRECTIVE
+    *ngIf is changed to @if
+    example the above example becomes
+        @if(show) {
+            <p>{{label}}</p>
+        }
+        @else {
+            <p>Add a label</p>
+        }
+
+    SYNTAX:
+    @if(condition1) {
+        elements
+    }
+    @else if(condition2) {
+        elements
+    }
+    @else {
+        elements
+    }
+-->

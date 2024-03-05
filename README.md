@@ -18,4 +18,7 @@
                 - Event binding
                 - $event
         - Two way binding
+    - Directives
+        - ngIf
+        - ngIf else
         

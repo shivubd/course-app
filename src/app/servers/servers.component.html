@@ -15,12 +15,12 @@ because "" itself is a exp and cant put exp inside a exp-->
 <p>{{serverCreationStatus}}</p>
 
 <input type="text" class="form-control"
-    (input)="onUpdateServerName($event)">
+    (input)="onUpdateServerName($event)" placeholder="One way binding">
 <!--$event when input event is triggered a event is passed to the method, this event contains the target and value-->
 <p>{{serverName}}</p>
 
 <input type="text" class="form-control"
-    [(ngModel)]="serverName">
+    [(ngModel)]="serverName" placeholder="Two way binding">
 <!--TWO WAY BINDING: here we use ngModel from FormsModule
     Here the value of typescript varible is set in input tag this is TS->HTML
     and when the value is changed in input that value is set to typescript varible this is HTML->TS -->

@@ -1,0 +1,17 @@
+<h2>All binding component</h2>
+<input type="text" class="form-control"
+    [(ngModel)]="shapeName"
+    (input)="charLength($event)">
+<p>{{charactersLength?charactersLength:''}}</p>
+<button class="btn btn-primary" [innerText]="'Create ' + this.shapeName"
+    (click)="createShape()"></button>
+<p *ngFor="let shape of shapes">{{shape}}</p>
+
+<!--
+    LINE 3 : Two way binding
+    LINE 4 : $event
+    LINE 5 : String interpolation
+    LINE 6 : Property binding
+    LINE 7 : Event binding
+    LINE 8 : String interpolation
+-->

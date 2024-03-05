@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-@Component({
+@Component({  //app.module.ts bootstrap: [AppComponent] points here
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']

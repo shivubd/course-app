@@ -21,4 +21,6 @@
     - Directives
         - ngIf
         - ngIf else
-        
+        - ngFor
+        - ngStyle
+        - ngClass

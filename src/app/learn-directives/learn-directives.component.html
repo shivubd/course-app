@@ -3,7 +3,7 @@
     (input)="setLabel($event)">
 <button class="btn btn-primary"
     (click)="showLabel()">Submit</button>
-<p *ngIf="show; else noshowmsg">{{label}}</p>
+<p *ngIf="show; else noshowmsg">{{label}} added!</p>
 <!--If show is true the p tag is rendered else not-->
 <ng-template #noshowmsg>
     <p>Add a label</p>
@@ -33,3 +33,14 @@
         elements
     }
 -->
+
+<!--ngStyle and ngClass directives-->
+<!--we can set a style/class to element binding a varible or method-->
+<p [ngStyle]="{backgroundColor:getColor()}"
+    [ngClass]="getClass()">{{num}}</p>
+
+<!--ngFor directive-->
+<!--We can create a multiple elements by traversing through a list-->
+<ul>
+    <li *ngFor="let l of labels">{{l}}</li>
+</ul>

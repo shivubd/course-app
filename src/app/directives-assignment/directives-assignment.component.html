@@ -1,0 +1,14 @@
+<button class="btn btn-primary"
+    (click)="buttonClick()">
+    Display details
+</button>
+<p *ngIf="isEnabled">Secret password: tuna</p>
+<ul>
+    <!--index a i, returns the index of current iteration it starts from 0-->
+    <li *ngFor="let click of clicks; index as i"
+        [ngStyle]="{backgroundColor: i+1>4?'blue':''}"
+        [ngClass]="{'custom-class':i+1>4}">{{click}}</li>
+        <!--[ngClass]="{ 'classname': true }"
+                            OR
+            [ngClass]="true/false?'classname1':'classname2'"-->
+</ul>

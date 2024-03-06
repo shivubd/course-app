@@ -9,7 +9,7 @@
             - selector
             - template / templateUrl
             - styles / styleUrls
-    - Data binding
+    - Data binding (all-binding, data-binding-assignment)
         - One way binding
             - TS -> HTML
                 - String interpolation
@@ -18,9 +18,14 @@
                 - Event binding
                 - $event
         - Two way binding
-    - Directives
+    - Directives (learn-directives, directives-assignment)
         - ngIf
         - ngIf else
         - ngFor
         - ngStyle
         - ngClass
+    - Custom Properties and Events (cmp-binding)
+        - PARENT -> CHILD
+            - @Input() [ PROPERTY BINDING ]
+        - CHILD -> PARENT
+            - @Output() [ EVENT BINDING ]

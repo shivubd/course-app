@@ -9,6 +9,9 @@ import { AllBindingComponent } from './all-binding/all-binding.component';
 import { DataBindingAssignmentComponent } from './data-binding-assignment/data-binding-assignment.component';
 import { LearnDirectivesComponent } from './learn-directives/learn-directives.component';
 import { DirectivesAssignmentComponent } from './directives-assignment/directives-assignment.component';
+import { HighlightDirective } from './custom-highlight-directive/highlight.directive';
+import { RenderHighlightDirective } from './cutom-better-highlight-directive/render-highlight.directive';
+import { ReverseIfDirective } from './custom-reverse-if-directive/reverse-if.directive';
 
 @NgModule({ //Decorator for defining a module
   declarations: [
@@ -18,7 +21,10 @@ import { DirectivesAssignmentComponent } from './directives-assignment/directive
     AllBindingComponent,
     DataBindingAssignmentComponent,
     LearnDirectivesComponent,
-    DirectivesAssignmentComponent //we should declare the components which will be used by app.component
+    DirectivesAssignmentComponent,
+    HighlightDirective,
+    RenderHighlightDirective,
+    ReverseIfDirective //we should declare the components which will be used by app.component
   ],
   imports: [
     BrowserModule,

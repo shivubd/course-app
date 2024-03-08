@@ -22,6 +22,7 @@
     - ngIf
     - ngIf else
     - ngFor
+    - ngSwitch, ngSwitchCase, ngSwitchDefault
     - ngStyle
     - ngClass
 - Custom Properties and Events (cmp-binding)
@@ -43,3 +44,11 @@
     6. ngAfterViewInit()
     7. ngAfterViewChecked()
     8. ngOnDestroy()
+- Custom directives (first-app -> learn-directives)
+    - @Directive()
+    - Attribute directive 
+        - ElementRef, Renderer2, @HostBinding()
+        - @HostListner()
+    - Structural directive
+        - @Input() set, TemplateRef<>, ViewContainerRef
+

@@ -41,6 +41,25 @@
 
 <!--ngFor directive-->
 <!--We can create a multiple elements by traversing through a list-->
-<ul>
+<h5>Custom attribute directive example - appHighlight</h5>
+<ul appHighlight>
     <li *ngFor="let l of labels">{{l}}</li>
 </ul>
+<!--Here appHighlight is a CUSTOM DIRECTIVE, that is defined in highlight.directive.ts-->
+<ul appRenderHighlight>
+    <li *ngFor="let l of labels">{{l}}</li>
+</ul>
+
+<h5>Custom structural directive example - appReverseIf</h5>
+<button class="btn btn-success" (click)="reverseflag = !reverseflag">CURRENT SELECTION: {{reverseflag}}</button>
+<p *appReverseIf="reverseflag">CURRENT IS FALSE SO THIS IS SHOWN</p>
+<!--Here appReverseIf is a structural directive-->
+
+<!--ngSwitch-->
+<input type="number" class="form-input" placeholder="Enter 1, 2 or 3" [(ngModel)]="switchvalue">
+<div [ngSwitch]="switchvalue"><!--Here ngSwitch takes a value which it will compare with switchCases-->
+    <p *ngSwitchCase="1">Value is 1</p> <!--*ngSwitchCase is a case for the element to display-->
+    <p *ngSwitchCase="2">Value is 2</p>
+    <p *ngSwitchCase="3">Value is 3</p>
+    <p *ngSwitchDefault>Default value</p> <!--*ngSwitchDefault is a default case for the element to display-->
+</div>

@@ -10,6 +10,8 @@ export class LearnDirectivesComponent {
   show: boolean = false;
   num: number = 0;
   labels: string[] = [];
+  reverseflag: boolean = true;
+  switchvalue: number | undefined;
   setLabel(event: Event) {
     this.label = (<HTMLInputElement>event.target).value
     if(!this.label.length){
